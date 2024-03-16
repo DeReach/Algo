@@ -23,6 +23,8 @@ public class Board {
     }
 
     public void printBoard() {
-
+        for (int[] row: tiles) {
+            System.out.println(Arrays.toString(row));
+        }
     }
 }
