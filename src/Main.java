@@ -1,4 +1,4 @@
-import java.util.*;
+package src;
 
 public class Main {
     public static void main(String[] args) {
@@ -18,7 +18,7 @@ public class Main {
         Board initialBoard = new Board(initialTiles);
         Board solvedBoard = new Board(solvedTiles);
 
-        System.out.println("Initial Board:");
+        System.out.println("Initial src.Board:");
         initialBoard.printBoard();
     }
 }
