@@ -1,5 +1,13 @@
 package src;
 
+import src.Algorithm.Algorithm;
+import src.Algorithm.AlgorithmType;
+import src.Algorithm.BFS;
+
+import java.util.Arrays;
+import java.util.LinkedList;
+
+
 public class Main {
     public static void main(String[] args) {
         int[][] initialTiles = {
@@ -18,7 +26,10 @@ public class Main {
         Board initialBoard = new Board(initialTiles);
         Board solvedBoard = new Board(solvedTiles);
 
-        System.out.println("Initial src.Board:");
-        initialBoard.printBoard();
+        Algorithm bfs = new Algorithm(AlgorithmType.BFS, solvedBoard);
+        Algorithm dijkstra = new Algorithm(AlgorithmType.DIJKSTRA, solvedBoard);
+        Algorithm astar = new Algorithm(AlgorithmType.ASTAR, solvedBoard);
+
+        bfs.solve(initialBoard);
     }
 }
